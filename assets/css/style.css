@@ -1,0 +1,76 @@
+body{ 
+    height: 100%;
+     background-image: url(https://wallpapers.com/images/hd/1080p-cyberpunk-2077-background-mge28woqzd2zz1jb.jpg);
+     background-position: center center;
+     background-repeat: no-repeat;
+     background-size: cover;
+     background-attachment: fixed; 
+     font-family: "Barlow Condensed", sans-serif;
+ }
+ 
+
+
+h1,h2,h3,h4,h5,h6,p{
+    color:white;
+}
+
+.cartas{
+    
+    background-color: rgba(44, 44, 44,0.5);
+    opacity: 0.9;
+}
+
+.movimiento{
+    transition: 0.5 ease;
+}
+
+.movimiento:hover{
+    transform: scale(110%);
+    transition: 0.3s ease;
+    filter: drop-shadow(1px 1px 1px black);
+}
+    
+.btn-primary{
+    width: 100%;
+    border: none;
+    border-radius: 50px;
+    background: purple;
+    color: white;
+    transition: background 0.5s ease;
+    
+}
+
+.btn-primary:hover{
+    background: blue;
+}
+
+.carrusel{
+    padding: 50px;
+    background-color: rgba(44, 44, 44,0.5);
+    opacity: 0.9;
+    border-radius: 50px;
+}
+
+.ficha{
+    text-align: center;
+    background-color: rgba(44, 44, 44,0.3);
+    
+}
+
+.footer{
+    margin-top: 250px;
+}
+
+.consolas{
+    margin: 1rem;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 50px;
+    transition: background-color 0.5s ease;
+}
+
+.consolas:hover{
+    transform: scale(130%);
+    transition: 0.3s ease;
+    filter: drop-shadow(1px 1px 1px black);
+}
