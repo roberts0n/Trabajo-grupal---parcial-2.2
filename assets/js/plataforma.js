@@ -1,4 +1,5 @@
-import { mostrarCartas,juegoCard } from "./script.js";
+import { mostrarCartas} from "./script.js";
+import { navbarPlataforma } from "./index.js";
  
  
 
@@ -24,10 +25,12 @@ export const getJuegoByPlataforma = async(plataforma) =>{
 }
 
 
+
 document.addEventListener("DOMContentLoaded", () => {
     const params = new URLSearchParams(window.location.search);
     const plataformaNombre = params.get('plataforma');
     getJuegoByPlataforma(plataformaNombre);
+    navbarPlataforma();
     
 
   });

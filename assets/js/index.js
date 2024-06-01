@@ -46,4 +46,36 @@ const mostrarPlataformas = ()=>{
 }
 
 
-mostrarPlataformas();
+
+export const navbarPlataforma = ()=>{
+
+    document.querySelectorAll('.plataformaEnlace').forEach((plataformaEnlace)=>{
+        
+        plataformaEnlace.addEventListener('click',(event)=>{
+            event.preventDefault();
+            
+            const imagen = event.currentTarget.querySelector('img');
+            const nombrePlataforma = imagen.getAttribute('alt');
+            const nuevaURL = `plataforma.html?plataforma=${encodeURIComponent(nombrePlataforma)}`;
+
+            window.location.href = nuevaURL;
+            console.log(nombrePlataforma);
+                
+        });
+        
+    });
+
+
+}
+
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    if (document.getElementById("plataformasAbrir")) {
+        mostrarPlataformas();
+    }
+    navbarPlataforma();
+
+
+})

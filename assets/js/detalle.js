@@ -47,7 +47,7 @@ const cartaJuegoElegido = (juego)=>{
             <h2 class="mt-5">${juego.nombre}</h2>
             <h3 class="">${juego.plataformas}</h3>
             <h4 class="">${juego.precio}</h4>
-            <p class="mt-5 ">${juego.stock}</p>
+            <p class="mt-5 ">${juego.descripcion}</p>
             <button class="btn btn-primary mt-5"> Comprar</button>
         </div>
     

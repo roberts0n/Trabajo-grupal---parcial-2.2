@@ -4,11 +4,11 @@
 
     try{
         
-        const response = await fetch("https://api-game-store-32ua.onrender.com/")
+        const response = await fetch("https://api-game-store-32ua.onrender.com")
 
         const data = await response.json();
-        /* console.log(data.juegos); */
-        mostrarCartas(data.juegos);
+         /* console.log(data.juegoABuscar);  */
+        mostrarCartas(data.juego);
     }catch(error){
         console.log(`El error es ${error}`);
     }
@@ -55,4 +55,5 @@ export const juegoCard = ({nombre,imagen,precio})=>{
 
 }
 
-getJuegos()
+/* getJuegos()
+ */
