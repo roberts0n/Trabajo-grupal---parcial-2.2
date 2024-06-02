@@ -48,13 +48,49 @@ const cartaJuegoElegido = (juego)=>{
             <h3 class="">${juego.plataformas}</h3>
             <h4 class="">${juego.precio}</h4>
             <p class="mt-5 ">${juego.descripcion}</p>
-            <button class="btn btn-primary mt-5"> Comprar</button>
+            <button id="añadirCarrito" class="btn btn-primary mt-5"> Comprar</button>
         </div>
     
     `
     juegoContainerElegido.innerHTML = detalleHTML;
 }
 
+const carritoCompra = (juegoNombre)=>{
+
+    document.getElementById('añadirCarrito').addEventListener('click',function(){+
+
+        detalleJuego(juegoNombre).then(juego=>{
+            if(juego){
+
+                console.log(juego);
+
+                const productoId = juego.id;
+                const productoNombre = juego.nombre;
+                const productoPrecio = juego.precio;
+
+                const usuario = JSON.parse(localStorage.getItem('login_success'));
+                if(!usuario){
+                    return alert('Debes iniciar sesion para poder comprar juegos');
+                }
+
+                const cuentas = JSON.parse(localStorage.getItem('usuarios'));
+                const usuarioIndex = cuentas.findIndex(cuenta => cuenta.email ==usuario.email);
+
+                const productoCarrito = usuario.carrito.find(item => item.id === productoId);
+                if (productoCarrito){
+                    return alert('Producto ya añadido');
+                }
+
+                usuario.carrito.push({ id: productoId , nombre : productoNombre , precio : productoPrecio });
+
+                cuentas[usuarioIndex].carrito = usuario.carrito;
+                localStorage.setItem('usuarios',JSON.stringify(cuentas));
+                localStorage.setItem('login_success',JSON.stringify(usuario));
+                alert (`Producto añadido al carrito!`);
+            }
+        })
+    })
+}
 
 
 
@@ -65,6 +101,7 @@ document.addEventListener("DOMContentLoaded", () => {
     detalleJuego(juegoNombre).then(juego =>{
         if (juego){
             cartaJuegoElegido(juego);
+            carritoCompra(juegoNombre);
         }
     })
     const usuario = JSON.parse(localStorage.getItem('login_success')) || false;

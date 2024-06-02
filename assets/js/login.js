@@ -21,6 +21,10 @@ document.getElementById('loginForm').addEventListener('submit',function(event){
     
 })
 
+const usuario = JSON.parse(localStorage.getItem('login_success')) || false;
+if (usuario) {
+    window.location.href = 'index.html';
+}
 
 /* let username = document.getElementById('username').value;
 let password = document.getElementById('password').value;

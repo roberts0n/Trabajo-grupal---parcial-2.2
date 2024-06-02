@@ -31,7 +31,7 @@ document.getElementById('registroForm').addEventListener('submit',function(event
     if (ifUsuarioRegistrado){
         return alert('Ya esta registrado este correo.')
     } 
-    cuentas.push({nombre : nombre , email : email , contraseña : contraseña});
+    cuentas.push({nombre : nombre , email : email , contraseña : contraseña, carrito: [] });
     localStorage.setItem('usuarios',JSON.stringify(cuentas));
     alert ('Registro exitoso jefe')
     window.location.href = 'login.html'
