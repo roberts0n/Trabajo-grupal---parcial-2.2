@@ -1,5 +1,5 @@
 import { mostrarCartas} from "./script.js";
-import { navbarPlataforma } from "./index.js";
+/* import { navbarPlataforma } from "./index.js"; */
  
 
 
@@ -28,9 +28,23 @@ export const getJuegoByCategoria = async(categoria) =>{
 document.addEventListener("DOMContentLoaded", () => {
     const params = new URLSearchParams(window.location.search);
     const categoriaNombre = params.get('categoria');
-    getJuegoByCategoria(categoriaNombre);
-    navbarPlataforma();
     
+    const usuario = JSON.parse(localStorage.getItem('login_success')) || false;
+
+    if(!usuario){
+        window.location.href = 'login.html';
+    }
+    
+    const logout = document.querySelector('#cerrarSesion');
+
+    logout.addEventListener('click',() =>{
+        alert('Hasta pronto!')
+        localStorage.removeItem('login_success');
+        window.location.href = "login.html";    
+    })
+    getJuegoByCategoria(categoriaNombre);
+   /*  navbarPlataforma();
+     */
 
   });
   
