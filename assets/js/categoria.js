@@ -1,5 +1,5 @@
- import { getJuegos,mostrarCartas,juegoCard } from "./script.js";
- 
+import { mostrarCartas} from "./script.js";
+import { navbarPlataforma } from "./index.js";
  
 
 
@@ -25,4 +25,15 @@ export const getJuegoByCategoria = async(categoria) =>{
 
 
 
-getJuegoByCategoria("Accion");
+document.addEventListener("DOMContentLoaded", () => {
+    const params = new URLSearchParams(window.location.search);
+    const categoriaNombre = params.get('categoria');
+    getJuegoByCategoria(categoriaNombre);
+    navbarPlataforma();
+    
+
+  });
+  
+
+
+

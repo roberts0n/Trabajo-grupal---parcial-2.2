@@ -40,8 +40,9 @@ export const mostrarCartas = (juegos)=>{
 }
 
 export const juegoCard = ({nombre,imagen,precio})=>{
-    
-    return `
+
+
+    const htmlCard = `
     <div class="col-md-4 col-sm-6 col-xs-12 my-5">
         <div class="card bg-dark text-center cartas movimiento" >
             <img src="${imagen}" class="card-img-top rounded" alt="Imagen de videojuego">
@@ -51,7 +52,10 @@ export const juegoCard = ({nombre,imagen,precio})=>{
             <a href="#" class="comprarBoton btn btn-primary" data-nombre="${nombre}" >Comprar</a>
         </div>
         </div>
-    </div> `;
+    </div> 
+    `;
+    
+    return htmlCard;
 
 }
 
