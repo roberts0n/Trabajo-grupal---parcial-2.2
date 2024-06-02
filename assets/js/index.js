@@ -69,13 +69,23 @@ export const navbarPlataforma = ()=>{
 }
 
 
+/* function checkLogin() {
+    if (localStorage.getItem('loggedIn') !== true) {
+        console.log('la conexion es correcta jefaso');
+        window.location.href = 'login.html';
+    }else{
+        console.log('estas on');
+    }
+}
 
+ */
 
 document.addEventListener("DOMContentLoaded", () => {
-    if (document.getElementById("plataformasAbrir")) {
+    /* if (document.getElementById("plataformasAbrir")) {
         mostrarPlataformas();
-    }
-    navbarPlataforma();
+    } */
+    /* navbarPlataforma(); */
+   /*  checkLogin (); */
 
 
 })

@@ -74,3 +74,47 @@ h1,h2,h3,h4,h5,h6,p{
     transition: 0.3s ease;
     filter: drop-shadow(1px 1px 1px black);
 }
+
+.form-control{
+    box-shadow: none !important;
+    border: none;
+    border-bottom: 1px solid;
+    border-radius: 4px 4px 0 0;
+}
+
+.container-fluid h4{
+    font-size: 2rem !important;
+    font-weight: 700;
+}
+
+.form-label{
+    font-family: 800;
+}
+
+form h4{
+    color: black;
+}
+
+form{
+    width: 24%;
+    background-color: rgb(255, 255, 255);
+    padding: 50px;
+    border-radius: 20px;
+    margin-top: 150px;
+       
+}
+
+html,body{
+    min-height: 100%;
+}
+
+
+
+.medio{
+    margin-top: 150px;
+}
+
+.medio2{
+    margin-top: 130px;
+}
+
