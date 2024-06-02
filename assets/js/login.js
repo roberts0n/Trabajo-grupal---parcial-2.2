@@ -15,6 +15,7 @@ document.getElementById('loginForm').addEventListener('submit',function(event){
         return alert('Usuario/Contraseña incorrectos');
     }   
     alert(`Bienvenido ${validarUsuario.nombre} !`);
+    localStorage.setItem('login_success', JSON.stringify(validarUsuario))
     window.location.href = 'index.html'
    
     

@@ -69,6 +69,7 @@ export const navbarPlataforma = ()=>{
 }
 
 
+
 /* function checkLogin() {
     if (localStorage.getItem('loggedIn') !== true) {
         console.log('la conexion es correcta jefaso');
@@ -80,7 +81,31 @@ export const navbarPlataforma = ()=>{
 
  */
 
+/* const usuario = JSON.parse(localStorage.getItem('login_success')) || false;
+
+if(!usuario){
+    window.location.href = 'login.html';
+}
+
+ */
+
 document.addEventListener("DOMContentLoaded", () => {
+
+    const usuario = JSON.parse(localStorage.getItem('login_success')) || false;
+
+    if(!usuario){
+        window.location.href = 'login.html';
+    }
+    
+    const logout = document.querySelector('#cerrarSesion');
+
+    logout.addEventListener('click',() =>{
+        alert('Hasta pronto!')
+        localStorage.removeItem('login_success');
+        window.location.href = "login.html";    
+    })
+
+
     /* if (document.getElementById("plataformasAbrir")) {
         mostrarPlataformas();
     } */
