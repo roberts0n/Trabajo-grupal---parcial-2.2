@@ -55,6 +55,12 @@ export const informacionCarrito = ()=>{
 
 }
 
+const usuario = JSON.parse(localStorage.getItem('login_success')) || false;
+
+if(!usuario){
+    window.location.href = 'login.html';
+}
+
 
 
 informacionCarrito();

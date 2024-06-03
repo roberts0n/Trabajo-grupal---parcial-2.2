@@ -32,6 +32,8 @@ document.getElementById('registroForm').addEventListener('submit',function(event
         return alert('Ya esta registrado este correo.')
     } 
     cuentas.push({nombre : nombre , email : email , contraseña : contraseña, carrito: [] });
+        /* Añadir aca un array que almacene los juegos COMPRADOS tras "comprarlos" del carrito*/
+
     localStorage.setItem('usuarios',JSON.stringify(cuentas));
     alert ('Registro exitoso jefe')
     window.location.href = 'login.html'
