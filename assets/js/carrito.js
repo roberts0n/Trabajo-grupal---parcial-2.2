@@ -62,5 +62,52 @@ if(!usuario){
 }
 
 
+export const botonCompra = (juegosEnCarro)=>{
+
+    document.getElementById('botonCompra').addEventListener('click',function(){
+
+        const productoId = juegosEnCarro.id;
+        const productoNombre = juegosEnCarro.nombre;
+        const productoPrecio = juegosEnCarro.precio;
+        const productoImagen = juegosEnCarro.imagen;
+
+        const usuario = JSON.parse(localStorage.getItem('login_success'));
+            if(!usuario){
+                return alert('Debes iniciar sesion para poder comprar juegos');
+            }
+
+            const cuentas = JSON.parse(localStorage.getItem('usuarios'));
+            const usuarioIndex = cuentas.findIndex(cuenta => cuenta.email ==usuario.email);
+
+            const productoCarrito = usuario.carrito.find(item => item.id === productoId);
+            if (productoCarrito){
+                return alert('Producto ya añadido');
+            }
+
+            usuario.compras.push({id: productoId , nombre : productoNombre , precio : productoPrecio , imagen : productoImagen})
+
+    })
+}
+
+export const procesoCompra = ()=>{
+
+    const cuentas = JSON.parse(localStorage.getItem('usuarios')) || false;
+
+    const usuarioLogin = JSON.parse(localStorage.getItem('login_success')) || false;
+
+    const usuario = cuentas.find(cuenta =>{cuenta.email === usuarioLogin.email});
+
+    if (usuario && usuario.carrito){
+
+    }
+
+    
+    
+}
+
 
 informacionCarrito();
+
+
+
+

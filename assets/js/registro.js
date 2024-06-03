@@ -31,8 +31,12 @@ document.getElementById('registroForm').addEventListener('submit',function(event
     if (ifUsuarioRegistrado){
         return alert('Ya esta registrado este correo.')
     } 
-    cuentas.push({nombre : nombre , email : email , contraseña : contraseña, carrito: [] });
-        /* Añadir aca un array que almacene los juegos COMPRADOS tras "comprarlos" del carrito*/
+    cuentas.push({nombre : nombre , email : email , contraseña : contraseña, carrito: [] , compras : [] });
+        /* Añadir aca un array que almacene los juegos COMPRADOS tras "comprarlos" del carrito
+        
+            Cambiar en categoria y plataformas el boton de comprar y remplazarlo por un "Agregar al carro"
+        
+        */
 
     localStorage.setItem('usuarios',JSON.stringify(cuentas));
     alert ('Registro exitoso jefe')
