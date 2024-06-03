@@ -36,3 +36,9 @@ document.getElementById('registroForm').addEventListener('submit',function(event
     alert ('Registro exitoso jefe')
     window.location.href = 'login.html'
 })
+
+const usuario = JSON.parse(localStorage.getItem('login_success')) || false;
+if (usuario) {
+    alert('Ya has iniciado sesion');
+    window.location.href = 'index.html';
+}

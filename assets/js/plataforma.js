@@ -17,6 +17,7 @@ export const getJuegoByPlataforma = async(plataforma) =>{
 
         
         mostrarCartas(juegosFiltrados);
+        plataformaTitulo(juegosFiltrados);
     }catch(error){
         console.log(`El error es ${error}`);
     }
@@ -25,11 +26,30 @@ export const getJuegoByPlataforma = async(plataforma) =>{
 }
 
 
+const plataformaTitulo = (juegos) =>{
+
+    console.log(juegos);
+
+    const containerTitulo = document.getElementById('plataformaTitulo');
+    containerTitulo.innerHTML = "";
+
+    const tituloHTML = `
+    <h1 class="text-center"> Categoria : ${juegos[0].plataformas} </h1>
+    `;
+
+    containerTitulo.innerHTML = tituloHTML;
+
+
+
+    
+}
+
+
 
 document.addEventListener("DOMContentLoaded", () => {
     const params = new URLSearchParams(window.location.search);
     const plataformaNombre = params.get('plataforma');
-    
+
     const usuario = JSON.parse(localStorage.getItem('login_success')) || false;
 
     if(!usuario){

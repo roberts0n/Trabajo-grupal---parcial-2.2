@@ -23,6 +23,7 @@ document.getElementById('loginForm').addEventListener('submit',function(event){
 
 const usuario = JSON.parse(localStorage.getItem('login_success')) || false;
 if (usuario) {
+    alert('Ya has iniciado sesion');
     window.location.href = 'index.html';
 }
 

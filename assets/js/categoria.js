@@ -13,8 +13,7 @@ export const getJuegoByCategoria = async(categoria) =>{
         
     
         const juegosFiltrados = data.juegos.filter(juego => juego.categoria === categoria);
-
-        
+        categoriaTitulo(juegosFiltrados);
         mostrarCartas(juegosFiltrados);
     }catch(error){
         console.log(`El error es ${error}`);
@@ -23,6 +22,23 @@ export const getJuegoByCategoria = async(categoria) =>{
 
 }
 
+const categoriaTitulo = (juegos) =>{
+
+    console.log(juegos);
+
+    const containerTitulo = document.getElementById('categoriaTitulo');
+    containerTitulo.innerHTML = "";
+
+    const tituloHTML = `
+    <h1 class="text-center"> Categoria : ${juegos[0].categoria} </h1>
+    `;
+
+    containerTitulo.innerHTML = tituloHTML;
+
+
+
+    
+}
 
 
 document.addEventListener("DOMContentLoaded", () => {

@@ -59,5 +59,9 @@ export const juegoCard = ({nombre,imagen,precio})=>{
 
 }
 
+export const carritoCompra = ()=>{
+
+}
+
 /* getJuegos()
  */
