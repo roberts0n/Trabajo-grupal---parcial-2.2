@@ -1,4 +1,4 @@
-import { mostrarCartas} from "./script.js";
+import { mostrarCartas } from "./script.js";
 /* import { navbarPlataforma } from "./index.js";
   */
  

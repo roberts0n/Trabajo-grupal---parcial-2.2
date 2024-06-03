@@ -1,4 +1,4 @@
-
+import { informacionCarrito } from "./script.js";
 const getJuegos = async() =>{
 
     try{
@@ -67,6 +67,7 @@ const carritoCompra = (juegoNombre)=>{
                 const productoId = juego.id;
                 const productoNombre = juego.nombre;
                 const productoPrecio = juego.precio;
+                const productoImagen = juego.imagen
 
                 const usuario = JSON.parse(localStorage.getItem('login_success'));
                 if(!usuario){
@@ -81,7 +82,7 @@ const carritoCompra = (juegoNombre)=>{
                     return alert('Producto ya añadido');
                 }
 
-                usuario.carrito.push({ id: productoId , nombre : productoNombre , precio : productoPrecio });
+                usuario.carrito.push({ id: productoId , nombre : productoNombre , precio : productoPrecio , imagen : productoImagen });
 
                 cuentas[usuarioIndex].carrito = usuario.carrito;
                 localStorage.setItem('usuarios',JSON.stringify(cuentas));
@@ -104,6 +105,7 @@ document.addEventListener("DOMContentLoaded", () => {
             carritoCompra(juegoNombre);
         }
     })
+    /* informacionCarrito(); */
     const usuario = JSON.parse(localStorage.getItem('login_success')) || false;
 
     if(!usuario){
