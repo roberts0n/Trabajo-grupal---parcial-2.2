@@ -1,5 +1,5 @@
 import { mostrarCartas} from "./script.js";
-/* import { navbarPlataforma } from "./index.js"; */
+
  
 
 
