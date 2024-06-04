@@ -25,7 +25,7 @@ export const diseñoCarro = (juego) =>{
             </div>
             <div class="col-md-3 mt-2 mb-5 ">
               <h3 class="pt-5 text-center">${juego.nombre}</h3>
-              <h5 class="mt-2 text-center"> $ : ${juego.precio}</h5>
+              <h5 class="mt-2 text-center"> $ : ${juego.precio} CLP</h5>
               <div class="d-flex justify-content-center">
                 <button id="eliminarCarrito-${juego.id}" class="mt-2 btn btn-danger">Eliminar del carro</>
               </div>
