@@ -56,6 +56,8 @@ export const informacionCarrito = ()=>{
             })
         });
 
+        mostrarTotalCarrito(usuario.carrito);
+
 };
 
 
@@ -184,6 +186,12 @@ export const procesoCompra = ()=>{
     if (usuario && usuario.carrito){
  */
     
+const mostrarTotalCarrito = (carrito)=> {
+    const total = carrito.reduce((sum, item) => sum + item.precio, 0);
+    const totalCarrito = document.getElementById('totalCarrito');
+    totalCarrito.textContent = `Total : $${total}`;
+    };
+    
 
     
 
@@ -193,6 +201,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const realizarCompras = document.getElementById('botonCompra');
     realizarCompras.addEventListener('click',procesoCompra);
+
+    const logout = document.querySelector('#cerrarSesion');
+
+    logout.addEventListener('click',() =>{
+        alert('Hasta pronto!')
+        localStorage.removeItem('login_success');
+        window.location.href = "login.html";    
+    });
 
 
 

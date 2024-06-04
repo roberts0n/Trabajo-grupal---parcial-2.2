@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Juego</title>
+    <title>Carrito</title>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
 
@@ -41,10 +41,10 @@
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle enlace ms-5" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Plataformas<i class="ms-1 fa-solid fa-gamepad"></i></a>
                 <div class="dropdown-menu">
-                  <a class="dropdown-item enlace " href="plataforma.html?plataforma=Steam">Steam <img src="assets/img/steam.svg" class="ms-1" alt="" width="20px"> </a>
-                  <a class="dropdown-item enlace enlace-play" href="plataforma.html?plataforma=Playstation">Playstation <img src="assets/img/playstation.svg" class="ms-1" alt="" width="20px"></a>
-                  <a class="dropdown-item enlace enlace-xbox" href="plataforma.html?plataforma=Xbox">Xbox <img src="assets/img/xbox.svg" class="ms-1" alt="" width="20px"></a>
-                  <a class="dropdown-item enlace enlace-switch" href="plataforma.html?plataforma=Switch">Switch <img src="assets/img/nintendo-switch.svg" class="ms-1" alt="" width="20px"></a>
+                  <a class="dropdown-item enlace " href="plataforma.html?plataforma=Steam">Steam <img src="/assets/img/steam.svg" class="ms-1" alt="" width="20px"> </a>
+                  <a class="dropdown-item enlace enlace-play" href="plataforma.html?plataforma=Playstation">Playstation <img src="/assets/img/playstation.svg" class="ms-1" alt="" width="20px"></a>
+                  <a class="dropdown-item enlace enlace-xbox" href="plataforma.html?plataforma=Xbox">Xbox <img src="/assets/img/xbox.svg" class="ms-1" alt="" width="20px"></a>
+                  <a class="dropdown-item enlace enlace-switch" href="plataforma.html?plataforma=Switch">Switch <img src="/assets/img/nintendo-switch.svg" class="ms-1" alt="" width="20px"></a>
                 </div>
               </li>
             </ul>
@@ -53,7 +53,7 @@
                 <a class="nav-link enlace me-5 " href="#" id="cerrarSesion">Cerrar sesion</a>
               </li>
               <li>
-                <a  class="nav-link enlace ms-5 ms-auto me-3" href="">Carro de compra<i class="ms-1 fa-solid fa-cart-shopping "></i><span id="cuentaCarro" class="ms-1">0</span></a>
+                <a  class="nav-link enlace ms-5 ms-auto me-3" href="">Carro de compra<i class="ms-1 fa-solid fa-cart-shopping "></i><span id="cuentaCarro" class="ms-1"></span></a>
               </li>
             </ul>
           </div>
@@ -69,7 +69,7 @@
         <div id="carroRow" class="row">
         </div>
         <div>
-          <h3 class="text-center mt-5 mb-5">Total : $60000</h3>
+          <h3 class="text-center mt-5 mb-5" id="totalCarrito"></h3>
           <button id="botonCompra" class="btn btn-primary">Comprar</button>
         </div>
     </div>
@@ -98,6 +98,6 @@
 
     <script src="https://kit.fontawesome.com/602e2f21cf.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script type="module" src="assets/js/carrito.js"></script>
+    <script type="module" src="/assets/js/carrito.js"></script>
 </body>
 </html>

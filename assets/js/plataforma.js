@@ -1,7 +1,4 @@
 import { mostrarCartas } from "./script.js";
-/* import { navbarPlataforma } from "./index.js";
-  */
- 
 
 
 export const getJuegoByPlataforma = async(plataforma) =>{
@@ -34,7 +31,7 @@ const plataformaTitulo = (juegos) =>{
     containerTitulo.innerHTML = "";
 
     const tituloHTML = `
-    <h1 class="text-center"> Categoria : ${juegos[0].plataformas} </h1>
+    <h1 class="text-center"> Plataforma : ${juegos[0].plataformas} </h1>
     `;
 
     containerTitulo.innerHTML = tituloHTML;
@@ -62,10 +59,8 @@ document.addEventListener("DOMContentLoaded", () => {
         alert('Hasta pronto!')
         localStorage.removeItem('login_success');
         window.location.href = "login.html";    
-    })
+    });
     getJuegoByPlataforma(plataformaNombre);
-    /* navbarPlataforma(); */
-    
 
   });
   

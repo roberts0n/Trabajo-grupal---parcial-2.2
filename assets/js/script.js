@@ -1,21 +1,4 @@
 
-
- /* const getJuegos = async() =>{
-
-    try{
-        
-        const response = await fetch("https://api-game-store-32ua.onrender.com")
-
-        const data = await response.json();
-         console.log(data.juegos);  
-        mostrarCartas(data.juego);
-    }catch(error){
-        console.log(`El error es ${error}`);
-    }
-
-
-}
- */
 export const mostrarCartas = (juegos)=>{
 
     const contenedorJuego = document.getElementById("juegoRow");
@@ -114,7 +97,3 @@ export const informacionCarrito = ()=>{
 
 
 }
-
-
-/* getJuegos()
- */

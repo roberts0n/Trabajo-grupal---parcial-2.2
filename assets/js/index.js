@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const usuario = JSON.parse(localStorage.getItem('login_success')) || false;
 
     if(!usuario){
-        window.location.href = 'login.html';
+        window.location.href = '/vistas/login.html';
     }
     
     const logout = document.querySelector('#cerrarSesion');
@@ -12,15 +12,9 @@ document.addEventListener("DOMContentLoaded", () => {
     logout.addEventListener('click',() =>{
         alert('Hasta pronto!')
         localStorage.removeItem('login_success');
-        window.location.href = "login.html";    
+        window.location.href = "/vistas/login.html";    
     })
 
-
-    /* if (document.getElementById("plataformasAbrir")) {
-        mostrarPlataformas();
-    } */
-    /* navbarPlataforma(); */
-   /*  checkLogin (); */
 
 
 })

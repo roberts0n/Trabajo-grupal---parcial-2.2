@@ -16,7 +16,7 @@ document.getElementById('loginForm').addEventListener('submit',function(event){
     }   
     alert(`Bienvenido ${validarUsuario.nombre} !`);
     localStorage.setItem('login_success', JSON.stringify(validarUsuario))
-    window.location.href = 'index.html'
+    window.location.href = '/index.html'
    
     
 })
@@ -24,18 +24,6 @@ document.getElementById('loginForm').addEventListener('submit',function(event){
 const usuario = JSON.parse(localStorage.getItem('login_success')) || false;
 if (usuario) {
     alert('Ya has iniciado sesion');
-    window.location.href = 'index.html';
+    window.location.href = '/index.html';
 }
 
-/* let username = document.getElementById('username').value;
-let password = document.getElementById('password').value;
-
-if (username==='usuario' && password ==='contraseña'){
-
-    localStorage.setItem('loggedIn',true);
-    window.location.href = 'index.html';
-
-}else{
-
-    document.getElementById('loginMessage').textContent = 'Credenciales incorrectas. Intentelo de nuevo.';
-} */
