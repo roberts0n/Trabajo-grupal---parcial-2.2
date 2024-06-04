@@ -44,6 +44,18 @@ h1,h2,h3,h4,h5,h6,p{
     background: blue;
 }
 
+.btn-danger{
+    width: 50%;
+    border: none;
+    border-radius: 50px;
+    color: white;
+    transition: 0.5s ease;
+}
+
+.btn-danger:hover{
+    background: rgb(0, 0, 0);
+}
+
 
 @media (min-width: 767.98px){
     .carrusel{

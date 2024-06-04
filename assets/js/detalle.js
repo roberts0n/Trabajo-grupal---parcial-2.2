@@ -67,7 +67,7 @@ const carritoCompra = (juegoNombre)=>{
                 const productoId = juego.id;
                 const productoNombre = juego.nombre;
                 const productoPrecio = juego.precio;
-                const productoImagen = juego.imagen
+                const productoImagen = juego.imagen;
 
                 const usuario = JSON.parse(localStorage.getItem('login_success'));
                 if(!usuario){
@@ -80,6 +80,12 @@ const carritoCompra = (juegoNombre)=>{
                 const productoCarrito = usuario.carrito.find(item => item.id === productoId);
                 if (productoCarrito){
                     return alert('Producto ya añadido');
+                }
+
+                const productoComprado = usuario.compras.find(juego => juego.id === productoId);
+
+                if(productoComprado){
+                    return alert('Ya compraste este juego!')
                 }
 
                 usuario.carrito.push({ id: productoId , nombre : productoNombre , precio : productoPrecio , imagen : productoImagen });
